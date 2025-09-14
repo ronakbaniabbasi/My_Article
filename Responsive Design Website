@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Project of Ronak Baniabbasi</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="stylesResponsive.css">
+<style> 
+.dark-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 100px 0;
+}
+
+section {
+ /*  opacity: 0; */
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header with background image and dark overlay */
+#header {
+  background-image: url('your-image.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay */
+.dark-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity (0.5 = 50% dark) */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center content */
+.container {
+  text-align: center;
+}
+
+/* Form styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input.form-control {
+  border-radius: 0;
+}
+
+button.btn {
+  border-radius: 0;
+}
+</style>
+</head>
+<body>
+  <!-- Content goes here -->
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script src="scriptResponsive.js"></script>
+
+   <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">MySite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#header">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+ <!--header-->
+<header id="header" class="text-white text-center py-5">
+    <div class="dark-overlay">
+      <div class="container">
+        <h1 class="display-4">Welcome to MySite</h1>
+        <p class="lead">Your success is our priority</p>
+        <form class="d-flex justify-content-center">
+          <input type="email" class="form-control w-50" placeholder="Enter your email">
+          <button class="btn btn-primary ms-2">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Two-Column Text</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="col-md-6">
+        <h2>Two-Column Text</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="container my-5">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12 text-center">
+        <i class="bi bi-gear-fill fs-1"></i>
+        <h3>Service 1</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 text-center">
+        <i class="bi bi-cloud-fill fs-1"></i>
+        <h3>Service 2</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 text-center">
+        <i class="bi bi-code-slash fs-1"></i>
+        <h3>Service 3</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </section>
+
+   <!--Gallery-->
+  <section id="gallery" class="container my-5">
+    <h2 class="text-center mb-4">Gallery</h2>
+    <div class="row">
+      <div class="col-md-4 col-12 mb-4"><img src="Caviar.jpg" type="jpg" class="img-fluid"></div>
+      <div class="col-md-4 col-12 mb-4"><img src="ChanelBag.jpg" type="jpg" class="img-fluid"></div>
+      <div class="col-md-4 col-12 mb-4"><img src="PurpleChanel.jpg" type="jpg" class="img-fluid"></div>
+    </div>
+  </section>
+
+   <!--comments slider-->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Customer Reviews</h2>
+    <div id="commentsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <p>Great service!</p>
+        </div>
+        <div class="carousel-item">
+          <p>Highly recommended!</p>
+        </div>
+        <div class="carousel-item">
+          <p>Excellent support!</p>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#commentsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#commentsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!--pricingPanel-->
+  <section id="pricing" class="container my-5">
+    <h2 class="text-center mb-4">Pricing</h2>
+    <div class="row">
+      <div class="col-md-4 col-12 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Basic</h5>
+            <p class="card-text">$10/month</p>
+          </div>   
+        </div>  
+      </div>
+      <div class="col-md-4 col-12 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Basic</h5>
+            <p class="card-text">$20/month</p>
+          </div>   
+        </div>  
+      </div>
+      <div class="col-md-4 col-12 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Basic</h5>
+            <p class="card-text">$30/month</p>
+          </div>   
+        </div>  
+      </div>
+      <!-- Repeat for other plans -->
+    </div>
+  </section>
+
+  <!--contact us-->
+<section id="contact" class="container my-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <form>
+          <input type="text" class="form-control mb-3" placeholder="Name">
+          <input type="email" class="form-control mb-3" placeholder="Email">
+          <textarea class="form-control mb-3" placeholder="Message"></textarea>
+          <button class="btn btn-primary">Send</button>
+        </form>
+      </div>
+      <div class="col-md-6 col-12">
+        <p>Address: 123 Main St, City</p>
+      </div>
+    </div>
+  </section>
+
+   <!--footer-->
+  <footer class="bg-dark text-white text-center py-4">
+    <a href="https://example.com" class="text-white">Visit Example</a>
+    <button id="upButton" class="btn btn-secondary mt-3">↑</button>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scriptResponsive.js"></script>
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scriptResponsive.js">
+document.getElementById('upButton').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < window.innerHeight * 0.75) {
+        section.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+
+</html>
